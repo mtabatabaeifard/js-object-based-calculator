@@ -1,4 +1,4 @@
-# simple js calculator
+# js object-based calculator
 ### how to use:
 
 	at the first prompt please enter left hand
