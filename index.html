@@ -8,38 +8,27 @@
   </head>
   <body>
     <script>
-          const calculator={
-              resault:0,
-              operator:null,
-              calculator(a,b){
-              if (this.operator==="+"){
-                  this.resault= a+b;
-              }
-              else if(this.operator==="-")
-              {
-                this.resault= a-b;
-              }
-              else if(this.operator==="*")
-              {
-                this.resault= a*b;
-              }
-              else if(this.operator==="/")
-              {
-                this.resault= a/b;
-              }
-              else{
-                this.resault='Error!';
-              }
-              
-
+      const calculator = {
+        leftHand: +prompt("Enter left hand:"),
+        rightHand: +prompt("Enter right hand:"),
+        resault: 0,
+        operator: prompt("enter operator:"),
+        calculator(a, b) {
+          if (this.operator === "+") {
+            this.resault = a + b;
+          } else if (this.operator === "-") {
+            this.resault = a - b;
+          } else if (this.operator === "*") {
+            this.resault = a * b;
+          } else if (this.operator === "/") {
+            this.resault = a / b;
+          } else {
+            this.resault = "Error!";
           }
-      }
-          let x = +prompt('Enter left hand:');
-          let y = +prompt('Enter right hand:');
-          let operator = prompt('enter operator:');
-          calculator.operator = operator;
-          calculator.calculator(x,y)
-          alert(`resault is : ${calculator.resault}`)
+        },
+      };
+      calculator.calculator(calculator.leftHand, calculator.rightHand);
+      alert(`resault is : ${calculator.resault}`);
     </script>
   </body>
 </html>
