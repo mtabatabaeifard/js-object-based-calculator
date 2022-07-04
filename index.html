@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js object-based calculator</title>
+  </head>
+  <body>
+    <script>
+          const calculator={
+              resault:0,
+              operator:null,
+              calculator(a,b){
+              if (this.operator==="+"){
+                  this.resault= a+b;
+              }
+              else if(this.operator==="-")
+              {
+                this.resault= a-b;
+              }
+              else if(this.operator==="*")
+              {
+                this.resault= a*b;
+              }
+              else if(this.operator==="/")
+              {
+                this.resault= a/b;
+              }
+              else{
+                this.resault='Error!';
+              }
+              
+
+          }
+      }
+          let x = +prompt('Enter left hand:');
+          let y = +prompt('Enter right hand:');
+          let operator = prompt('enter operator:');
+          calculator.operator = operator;
+          calculator.calculator(x,y)
+          alert(`resault is : ${calculator.resault}`)
+    </script>
+  </body>
+</html>
